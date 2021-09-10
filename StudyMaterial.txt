@@ -1,0 +1,39 @@
+---[INPUT FIELD REQUIRMENTS]
+
+----Has to only input numbers
+[SOLUTION] Type="number"
+
+------The First key Cannot be more than 6 for minutes or seconds
+[SOLUTION] onkeypress="if(event.key >= 6 && this.value.length === 0){event.preventDefault();}"
+
+----Has to only input a max of any 2 digitnumber of hours, minutes, and seconds:
+1. [SOLUTION FOR ARROWS/DESKTOP DEVICE] min and max
+
+2. [SOLUTION FOR KEY INPUT] onkeypress="if(event.key >= 6 && this.value.length === 0){event.preventDefault();}"
+
+------Cannot input negative numbers or math symbols 
+[SOLUTION] onkeydown="if(event.key==='.' || event.key==='-' || event.key==='+'){event.preventDefault();}"
+
+
+(Study):
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number
+
+(For Digit length):
+https://www.codegrepper.com/code-examples/shell/how+to+set+maxlength+of+input+type+number+in+html
+
+(OnInput):
+https://www.w3schools.com/jsref/event_oninput.asp
+
+(Slice):
+https://www.w3schools.com/jsref/jsref_slice_string.asp
+
+
+-----------------[Learned]:
+
+Slice counts in index, it also counts from a range (not including) the maximum number, 1-9 wont include 9. 
+
+
+[This is for getting a css style property] window.getComputedStyle(element).getPropertyValue("background-color")
+
+Min and Max only work for spinners(arrows) for number type inputs.
+MaxLength only works for text type inputs 

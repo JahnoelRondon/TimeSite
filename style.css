@@ -1,0 +1,311 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/* MY CODE */
+/* body backgrounds */
+.forest {
+    background-image: url("/imgs/woodsgreen.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.alaska {
+    background-image: url("/imgs/snow.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Header */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 120px;
+    background-color: rgba(0, 0, 0, 0.4);
+
+    color: white;
+    text-align: left;
+}
+
+h1 {
+    line-height: 120px;
+    font-size: 42px;
+    margin-left: 20px;
+    display: inline-block;
+}
+
+/* figure out how to made dropdowncontect grow width from right to left */
+.dropDown {
+    margin: 40px 20px 0px 0px;
+    float: right;
+    position: relative;
+}
+
+.dropBtn {
+    background-color: #04a5aa;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    text-shadow: black 2px 2px 6px;
+    border: none;
+}
+
+.dropdown-Content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    text-align: center;
+    min-width: 117px;
+    z-index: 1;
+}
+
+.dropdown-Content div {
+    color: black;
+    padding: 12px 0px;
+    text-shadow: black 2px 2px 8px;
+    text-decoration: none;
+}
+
+/* hover */
+.dropDown:hover .dropdown-Content {
+    display: block;
+}
+
+.dropDown:hover .dropBtn {
+    background-color: #03888d;
+    cursor: pointer;
+}
+
+.dropdown-Content div:hover {
+    background-color: #c8c8c8;
+    cursor: pointer;
+}
+
+/* MAIN PAGE */
+#container {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.box {
+    background: rgba(73, 73, 73, 0.5);
+    margin-top: 50px;
+    height: 140px;
+    padding: 30px;
+    position: relative;
+    border: solid rgba(41, 40, 40, 0.616) 10px;
+}
+
+.clockTitle {
+    height: 40px;
+    padding: 0px 10px;
+    background-color: rgb(0, 128, 128);
+    border: solid mediumaquamarine 2px;
+
+    color: wheat;
+    font-size: 18px;
+    text-align: center;
+    line-height: 40px;
+    position: absolute;
+    text-shadow: black 2px 2px 6px;
+    top: -25px;
+    left: -20px;
+}
+
+.inputContainer {
+    margin-left: 10px;
+    position: absolute;
+    top: 30px;
+    left: 0;
+}
+
+#clock {
+    padding-top: 70px;
+    color: wheat;
+    font-weight: bolder;
+    font-size: 22px;
+    text-align: center;
+    text-shadow: black 2px 2px 6px;
+}
+
+label {
+    font-size: 18px;
+    color: wheat;
+    text-shadow: black 2px 2px 4px;
+}
+
+input {
+    width: 140px;
+}
+
+.timerStyle {
+    width: 68px;
+}
+
+#reset {
+    display: none;
+}
+
+
+/* RESPONSIVENESS */
+
+@media only screen and (min-width: 600px){
+
+    h1 {
+        font-size: 54px;
+    }
+
+    #container {
+        width: 60%;
+    }
+    
+    .box {
+        height: 180px;
+    }
+
+    label {
+        font-size: 20px;
+    }
+
+    #clock {
+        font-size: 42px;
+    }
+
+}
+
+
+/* desktop */
+@media only screen and (min-width: 1200px){
+
+    h1 {
+        font-size: 68px;
+    }
+
+    #container {
+        width: 50%;
+    }
+
+    .clockTitle {
+        font-size: 24px;
+        top: 100px;
+        left: -140px;
+    }
+
+    .inputContainer {
+        top: 10px;
+        left: 20%;
+    }
+
+    label {
+        font-size: 22px;
+    }
+
+
+    #clock {
+        font-size: 64px;
+    }
+
+}

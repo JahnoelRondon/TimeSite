@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Down</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="alaska">
+    
+    <header>
+        <!-- create a background changer / style changer -->
+        <h1>Eternity</h1>
+
+        <div class="dropDown"> 
+            <button class="dropBtn">Background</button>
+            <div class="dropdown-Content">
+                <div id="forest" onclick="backgroundValue(event)">Forest</div>
+                <div id="alaska" onclick="backgroundValue(event)">Snowy Night</div>
+                <div id="blank" onclick="backgroundValue(event)">blank</div>
+            </div>
+        </div>
+
+    </header>
+    
+    <div id="container">
+
+    <!-- Input Count Down Date -->
+        <div class="box">
+            <div class="clockTitle" id="dateCountTitle">Input Time</div>
+            <!-- input -->
+            <div class="inputContainer">
+                <label for="inputName">Set your date:</label>
+                <input type="text" id="inputName" placeholder="Example: Jan 01, 2023" >
+                <button onclick="setCount()">Submit</button>
+            </div>
+
+            <div id="clock">
+                <span id="inputDate"></span>
+            </div>
+        </div>
+
+    <!-- Preset Count Down Date -->
+        <div class="box">
+            <div class="clockTitle" id="newYear"></div>
+            <div id="clock">
+                <span id="date"></span>
+            </div>
+        </div>
+
+    <!-- current time -->
+        <div class="box">
+            <div class="clockTitle">Current Time</div>
+            <div id="clock">
+                <span id="currentT"></span>
+            </div>
+        </div>
+
+        <!-- Count Down Timer -->
+        <div class="box">
+            <div class="clockTitle">Count Down</div>
+
+            <!-- input -->
+            <div class="inputContainer">
+                <label for="inputName">Set Count Down:</label>
+
+                <!-- check if the value of the first character is greater than 6, if so prevent the input -->
+                <input type="number" id="inputHours" min="0" max="99" class="timerStyle" placeholder="Hours"
+                onkeydown="if(event.key==='.' || event.key==='-' || event.key==='+'){event.preventDefault();}"
+                oninput="if(this.value.length > this.maxLength) {this.value = this.value.slice(0, this.maxLength);}" maxlength="2">
+
+                <input type="number" id="inputMinutes" min="0" max="59" class="timerStyle" placeholder="Minutes" onkeydown="if(event.key==='.' || event.key==='-' || event.key==='+'){event.preventDefault();}"
+                onkeypress="if(event.key >= 6 && this.value.length === 0){event.preventDefault();}"
+                oninput="if(this.value.length > this.maxLength) {this.value = this.value.slice(0, this.maxLength);}" maxlength="2">
+
+                <input type="number" id="inputSeconds" min="0" max="59" class="timerStyle" placeholder="Seconds" onkeydown="if(event.key==='.' || event.key==='-' || event.key==='+'){event.preventDefault();}"
+                onkeypress="if(event.key >= 6 && this.value.length === 0){event.preventDefault();}"
+                oninput="if(this.value.length > this.maxLength) {this.value = this.value.slice(0, this.maxLength);}" maxlength="2">
+
+                <button id="start" onclick="clockDown(event); hideBtn(event);">Start</button>
+                <button id="reset" onclick="reset(); hideBtn(event)">Restart</button>
+            </div>
+
+            <div id="clock">
+                <span id="hoursDown"></span>
+                <span id="minutesDown"></span>
+                <span id="secondsDown"></span>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

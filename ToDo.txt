@@ -1,0 +1,15 @@
+1. Make count down timer have input {
+	1.disable or the start button to stop spam abuse, make a reset button that clears interval and 
+	updates the time to what it originally was, or back to 0. 
+	
+	1.1 . possibilities for the button would be disable or no display for it when it starts and display 
+	reset when hitting that button and vice versa
+	
+	1.2 . Use another function to reset the time
+
+}
+
+2. Change my date count down to use input date type
+https://www.w3schools.com/html/html_form_attributes.asp 
+
+3. Ignore my notes files when publishing to github 
