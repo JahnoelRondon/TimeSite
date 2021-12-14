@@ -3,7 +3,6 @@ let body = document.querySelector("body");
 
 let forest = document.getElementById("forest");
 let alaska = document.getElementById("alaska");
-let blank = document.getElementById("blank");
 
 
 function backgroundValue(event){
