@@ -109,24 +109,27 @@ let secondsD = 0;
 let countDown;
 
 // these are empty strings
-let hourValue = document.getElementById("inputHours").value;
-let minuteValue = document.getElementById("inputMinutes").value;
-let secondValue = document.getElementById("inputSeconds").value;
+let hoursValue = document.getElementById("inputHours");
+let minutesValue = document.getElementById("inputMinutes");
+let secondsValue = document.getElementById("inputSeconds");
+
 
 
 function reset(){
-        console.log("stopmyfunc ran");
-        clearInterval(countDown)
-    }
+    console.log("stopmyfunc ran");
+    clearInterval(countDown)
+}
 
 function clockDown(event) {
 
-    // create origninal value variables that can be referenced to before the chang so that on reset the time goes back
-    // or call the processed values a new variable value and use the global value as reference?
 
-    hourValue = document.getElementById("inputHours").value;
-    minuteValue = document.getElementById("inputMinutes").value;
-    secondValue = document.getElementById("inputSeconds").value;
+    console.log(typeof(secondsValue.value))
+
+    // reassign these to the value of the inputs
+    // on the input make the default values 0
+    let hoursD;
+    let minutesD;
+    let secondsD;
 
 
     if(event.currentTarget.id === "start"){
@@ -136,6 +139,7 @@ function clockDown(event) {
 
     function startCountDown(){
         console.log("ran")
+
         secondsD -= 1;
         
         // adding 0 string
@@ -186,8 +190,6 @@ function clockDown(event) {
         }
 
     }
-
-    
     
 }
 

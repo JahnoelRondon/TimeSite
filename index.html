@@ -66,15 +66,15 @@
                 <label for="inputName">Set Count Down:</label>
 
                 <!-- check if the value of the first character is greater than 6, if so prevent the input -->
-                <input type="number" id="inputHours" min="0" max="99" class="timerStyle" placeholder="Hours"
+                <input type="number" id="inputHours" value="0" min="0" max="99" class="timerStyle" placeholder="Hours"
                 onkeydown="if(event.key==='.' || event.key==='-' || event.key==='+'){event.preventDefault();}"
                 oninput="if(this.value.length > this.maxLength) {this.value = this.value.slice(0, this.maxLength);}" maxlength="2">
 
-                <input type="number" id="inputMinutes" min="0" max="59" class="timerStyle" placeholder="Minutes" onkeydown="if(event.key==='.' || event.key==='-' || event.key==='+'){event.preventDefault();}"
+                <input type="number" id="inputMinutes" value="0" min="0" max="59" class="timerStyle" placeholder="Minutes" onkeydown="if(event.key==='.' || event.key==='-' || event.key==='+'){event.preventDefault();}"
                 onkeypress="if(event.key >= 6 && this.value.length === 0){event.preventDefault();}"
                 oninput="if(this.value.length > this.maxLength) {this.value = this.value.slice(0, this.maxLength);}" maxlength="2">
 
-                <input type="number" id="inputSeconds" min="0" max="59" class="timerStyle" placeholder="Seconds" onkeydown="if(event.key==='.' || event.key==='-' || event.key==='+'){event.preventDefault();}"
+                <input type="number" id="inputSeconds" value="0" min="0" max="59" class="timerStyle" placeholder="Seconds" onkeydown="if(event.key==='.' || event.key==='-' || event.key==='+'){event.preventDefault();}"
                 onkeypress="if(event.key >= 6 && this.value.length === 0){event.preventDefault();}"
                 oninput="if(this.value.length > this.maxLength) {this.value = this.value.slice(0, this.maxLength);}" maxlength="2">
 
