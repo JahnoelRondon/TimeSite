@@ -1,3 +1,3 @@
 ## Time Site
 
-simple app made for learning time in javascript and using DOM values. 
+simple app with clocks/time made for learning time in javascript and using DOM values. 
