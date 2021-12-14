@@ -127,9 +127,9 @@ function clockDown(event) {
 
     // reassign these to the value of the inputs
     // on the input make the default values 0
-    let hoursD;
-    let minutesD;
-    let secondsD;
+    let hoursD = parseInt(hoursValue.value);
+    let minutesD = parseInt(minutesValue.value);
+    let secondsD = parseInt(secondsValue.value);
 
 
     if(event.currentTarget.id === "start"){
