@@ -118,7 +118,9 @@ let hoursValue = document.getElementById("inputHours");
 let minutesValue = document.getElementById("inputMinutes");
 let secondsValue = document.getElementById("inputSeconds");
 
-
+document.getElementById("hoursDown").innerHTML = "Days:";
+document.getElementById("minutesDown").innerHTML = "Hours:";
+document.getElementById("secondsDown").innerHTML = "Seconds";
 
 function reset(){
     console.log("stopmyfunc ran");
@@ -183,10 +185,9 @@ function clockDown(event) {
 
         // clear interval once time runs out 
         if(hoursD == 0 && minutesD == 0 && secondsD == "0-1"){
-            alert("RING RING RING");
-            document.getElementById("hoursDown").innerHTML = "00:";
-            document.getElementById("minutesDown").innerHTML = "00:";
-            document.getElementById("secondsDown").innerHTML = "00";
+            document.getElementById("hoursDown").innerHTML = "";
+            document.getElementById("minutesDown").innerHTML = "";
+            document.getElementById("secondsDown").innerHTML = "complete";
             clearInterval(countDown);
         } else {
             document.getElementById("hoursDown").innerHTML = hoursD + ":";
@@ -209,6 +210,9 @@ function hideBtn(event){
     } else if(currentDisplay === "inline-block" && event.currentTarget.id == "reset") {
         document.getElementById("start").style.display = "inline-block";
         document.getElementById("reset").style.display = "none";
+        document.getElementById("hoursDown").innerHTML = "Days:";
+        document.getElementById("minutesDown").innerHTML = "Hours:";
+        document.getElementById("secondsDown").innerHTML = "Seconds";
     }
 }
 
