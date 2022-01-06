@@ -52,8 +52,11 @@ function setCount(){
             let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             let seconds = Math.floor((distance % (1000 * 60)) / (1000));
+
+            let outPut = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
         
-            document.getElementById("inputDate").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+            document.getElementById("inputDate").innerHTML = seconds < 0 ? 'complete' : outPut;
         } else {
             alert("Put in your date like this: (Oct 03 2021) or (October 03 2021)");
             document.getElementById("inputDate").innerHTML = "";
@@ -80,7 +83,10 @@ let startCount = setInterval(() => {
     let seconds = Math.floor((distance % (1000 * 60)) / (1000));
 
     document.getElementById("newYear").innerHTML = dateVariable;
-    document.getElementById("date").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+
+    let outPut = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+    document.getElementById("date").innerHTML = seconds < 0 ? 'complete' : outPut;
 
 }, 1000);
 
